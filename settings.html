@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Navigation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="menu-bars" id="menu-bars">&#9776;</div>
+    </div>
+    <nav class="nav-menu" id="nav-menu">
+        <ul class="nav flex-column nav-menu-items">
+            <li class="navbar-toggle">
+                <div class="menu-bars" id="close-btn">&times;</div>
+            </li>
+            <li class="nav-item nav-text">
+                <a class="nav-link text-white" href="index.html">Acasa</a>
+            </li>
+            <!-- <li class="nav-item nav-text">
+                <a class="nav-link text-white" href="/studenti">Studenti</a>
+            </li>
+            <li class="nav-item nav-text">
+                <a class="nav-link text-white" href="/profesori">Cadre didactice</a>
+            </li> -->
+            <li class="nav-item nav-text">
+                <a class="nav-link text-white" href="/configurare">Configurare</a>
+            </li>
+            <li class="nav-item nav-text">
+                <a class="nav-link text-white" href="login.html">Logout</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="main-wrapper">
+        <div class="page-wrapper">
+            <div class="content container">
+                <div class="page-header">
+                    <div class="row">
+                        <div class="col">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h3 class="page-title">Configurare</h3>
+                                <ul class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="settings.html">Settings</a></li>
+                                    <li class="breadcrumb-item active">General Settings</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="container mt-5">
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card shadow-sm">
+                                <div class="card-header text-white">
+                                    <h5 class="card-title mb-0">Detalii Website</h5>
+                                </div>
+                                <div class="card-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="websiteName">Nume Website<span
+                                                    class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="websiteName"
+                                                placeholder="Enter Website Name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Logo <span class="text-danger">*</span></label>
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" id="logoFile"
+                                                    accept="image/*">
+                                                <label class="custom-file-label" for="logoFile">Choose file</label>
+                                            </div>
+                                            <small class="form-text text-muted">Rezolutia recomandata este de 150px x
+                                                150px</small>
+                                            <div class="mt-2">
+                                                <img src="assets/img/logo.png" class="img-thumbnail" alt="Logo Image">
+                                                <button type="button" class="btn btn-danger btn-sm ml-2">Remove</button>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Favicon <span class="text-danger">*</span></label>
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" id="faviconFile"
+                                                    accept="image/*">
+                                                <label class="custom-file-label" for="faviconFile">Choose file</label>
+                                            </div>
+                                            <small class="form-text text-muted">Rezolutia recomandata este de 32px x
+                                                32px</small>
+                                            <div class="mt-2">
+                                                <img src="assets/img/favicon.png" class="img-thumbnail"
+                                                    alt="Favicon Image">
+                                                <button type="button" class="btn btn-danger btn-sm ml-2">Remove</button>
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-0">
+                                            <button type="submit" class="btn btn-primary">Update</button>
+                                            <button type="button" class="btn btn-secondary">Cancel</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card shadow-sm">
+                                <div class="card-header text-white">
+                                    <h5 class="card-title mb-0">Adresa</h5>
+                                </div>
+                                <div class="card-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="address1">Address Line 1 <span
+                                                    class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="address1"
+                                                placeholder="Enter Address Line 1">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="address2">Address Line 2 <span
+                                                    class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="address2"
+                                                placeholder="Enter Address Line 2">
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label for="city">Orasul <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control" id="city"
+                                                    placeholder="Enter City">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="state">Judetul <span class="text-danger">*</span></label>
+                                                <select class="form-control" id="state">
+                                                    <option selected>Select</option>
+                                                    <option>Alba</option>
+                                                    <option>Arad</option>
+                                                    <option>Argeș</option>
+                                                    <option>Bacău</option>
+                                                    <option>Bihor</option>
+                                                    <option>Bistrița-Năsăud</option>
+                                                    <option>Botoșani</option>
+                                                    <option>Brăila</option>
+                                                    <option>Brașov</option>
+                                                    <option>București</option>
+                                                    <option>Buzău</option>
+                                                    <option>Călărași</option>
+                                                    <option>Caraș-Severin</option>
+                                                    <option>Cluj</option>
+                                                    <option>Constanța</option>
+                                                    <option>Covasna</option>
+                                                    <option>Dâmbovița</option>
+                                                    <option>Dolj</option>
+                                                    <option>Galați</option>
+                                                    <option>Giurgiu</option>
+                                                    <option>Gorj</option>
+                                                    <option>Harghita</option>
+                                                    <option>Hunedoara</option>
+                                                    <option>Ialomița</option>
+                                                    <option>Iași</option>
+                                                    <option>Ilfov</option>
+                                                    <option>Maramureș</option>
+                                                    <option>Mehedinți</option>
+                                                    <option>Mureș</option>
+                                                    <option>Neamț</option>
+                                                    <option>Olt</option>
+                                                    <option>Prahova</option>
+                                                    <option>Sălaj</option>
+                                                    <option>Satu Mare</option>
+                                                    <option>Sibiu</option>
+                                                    <option>Suceava</option>
+                                                    <option>Teleorman</option>
+                                                    <option>Timiș</option>
+                                                    <option>Tulcea</option>
+                                                    <option>Vâlcea</option>
+                                                    <option>Vaslui</option>
+                                                    <option>Vrancea</option>
+
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label for="zip">Cod postal <span
+                                                        class="text-danger">*</span></label>
+                                                <input type="text" class="form-control" id="zip"
+                                                    placeholder="Enter Zip Code">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="country">Tara <span class="text-danger">*</span></label>
+                                                <select class="form-control" id="country">
+                                                    <option selected>Select</option>
+                                                    <option>Romania</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-0">
+                                            <button type="submit" class="btn btn-primary">Update</button>
+                                            <button type="button" class="btn btn-secondary">Cancel</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <footer class="text-center mt-5">
+            <p class="text-muted">&copy; By Gabi Mihalut. All rights reserved.</p>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="main.js"></script>
+</body>
+
+</html>
